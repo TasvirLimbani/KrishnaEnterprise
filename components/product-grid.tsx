@@ -13,7 +13,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
       {products.map((product) => (
-        <Link href={`/products/${product.id}`} key={product.id} className="group">
+        // <Link href={`/products/${product.id}`} key={product.id} className="group">
           <Card className="overflow-hidden h-full transition-all hover:shadow-md">
             <div className="aspect-square relative">
               <Image
@@ -41,7 +41,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
               </div>
             </CardFooter>
           </Card>
-        </Link>
+        // </Link>
       ))}
     </div>
   )
