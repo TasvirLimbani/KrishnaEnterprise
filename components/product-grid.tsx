@@ -17,7 +17,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
           <Card className="overflow-hidden h-full transition-all hover:shadow-md">
             <div className="aspect-square relative">
               <Image
-                src={getImageKitUrl(product.imageUrl || "", 300, 300)}
+                src={product.imageUrl}
                 alt={product.name}
                 fill
                 className="object-cover transition-transform group-hover:scale-105"

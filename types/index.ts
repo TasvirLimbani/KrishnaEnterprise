@@ -5,7 +5,7 @@ export interface Product {
   category: string
   price?: number // Made price optional
   inStock: boolean
-  imageUrl: string | null
+  imageUrl: string
   createdAt: string
 }
 
