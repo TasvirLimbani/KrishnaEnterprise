@@ -12,36 +12,35 @@ interface ProductGridProps {
 export default function ProductGrid({ products }: ProductGridProps) {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-      {products.map((product) => (
-        // <Link href={`/products/${product.id}`} key={product.id} className="group">
-          <Card className="overflow-hidden h-full transition-all hover:shadow-md">
-            <div className="aspect-square relative">
-              <Image
-                src={product.imageUrl}
-                alt={product.name}
-                fill
-                className="object-cover transition-transform group-hover:scale-105"
-                unoptimized={process.env.NODE_ENV !== 'production'} // Add this line
-              />
+      {products.map((product: Product) => (
+        <Card key={product.id} className="overflow-hidden h-full transition-all hover:shadow-md">
+          <div className="aspect-square relative">
+            <Image
+              src={getImageKitUrl(product.imageUrl)}
+              alt={product.name}
+              fill
+              className="object-cover"
+              priority={true}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </div>
+          <CardContent className="p-4">
+            <div className="flex justify-between items-start mb-2">
+              <h3 className="font-semibold text-lg line-clamp-1">{product.name}</h3>
+              <Badge variant="outline">{product.category}</Badge>
             </div>
-            <CardContent className="p-4">
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-semibold text-lg line-clamp-1">{product.name}</h3>
-                <Badge variant="outline">{product.category}</Badge>
-              </div>
-              <p className="text-muted-foreground text-sm line-clamp-2 mb-2">{product.description}</p>
-            </CardContent>
-            <CardFooter className="p-4 pt-0">
-              <div className="text-sm text-muted-foreground">
-                {product.inStock ? (
-                  <span className="text-green-600">In Stock</span>
-                ) : (
-                  <span className="text-red-600">Out of Stock</span>
-                )}
-              </div>
-            </CardFooter>
-          </Card>
-        // </Link>
+            <p className="text-muted-foreground text-sm line-clamp-2 mb-2">{product.description}</p>
+          </CardContent>
+          <CardFooter className="p-4 pt-0">
+            <div className="text-sm text-muted-foreground">
+              {product.inStock ? (
+                <span className="text-green-600">In Stock</span>
+              ) : (
+                <span className="text-red-600">Out of Stock</span>
+              )}
+            </div>
+          </CardFooter>
+        </Card>
       ))}
     </div>
   )

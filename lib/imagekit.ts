@@ -15,27 +15,3 @@ export function getImageKitUrl(path: string, width = 600, height = 600): string 
   // Otherwise, construct the ImageKit URL with transformations
   return path
 }
-
-// Function to upload an image to ImageKit
-// Note: In a real implementation, you would need a server-side component
-// to handle the actual upload with authentication
-export const uploadToImageKit = async (file: File): Promise<string> => {
-  const formData = new FormData();
-  formData.append('files', file, file.name);
-
-  const response = await fetch('https://fmh.imagekit.io/upload', {
-    method: 'POST',
-    body: formData,
-    headers: {
-      'Content-Type': 'multipart/form-data',
-    },
-  });
-
-  if (!response.ok) {
-    throw new Error('Image upload failed');
-  }
-
-  const data = await response.json();
-  return data[0].url; // Assuming the API returns an array with the uploaded file URL
-};
-
