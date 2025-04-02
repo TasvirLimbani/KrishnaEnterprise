@@ -110,7 +110,7 @@ export default function ProductsPage() {
           {isLoading ? (
             <div className="text-center py-12">Loading products...</div>
           ) : filteredProducts.length > 0 ? (
-            <ProductGrid products={filteredProducts} disableClick />
+            <ProductGrid products={filteredProducts} />
           ) : (
             <div className="text-center py-12">
               <p className="text-muted-foreground">No products found matching your criteria.</p>
