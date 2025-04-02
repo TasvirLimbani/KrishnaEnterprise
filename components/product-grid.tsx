@@ -19,7 +19,7 @@ export default function ProductGrid({ products }: ProductGridProps) {
               src={getImageKitUrl(product.imageUrl)}
               alt={product.name}
               fill
-              className="object-cover"
+              className="object-contain"
               priority={true}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
