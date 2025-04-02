@@ -13,7 +13,7 @@ export function getImageKitUrl(path: string, width = 600, height = 600): string 
   }
 
   // Otherwise, construct the ImageKit URL with transformations
-  return `${IMAGEKIT_URL_ENDPOINT}${path}?tr=w-${width},h-${height},fo-auto`
+  return path
 }
 
 // Function to upload an image to ImageKit
