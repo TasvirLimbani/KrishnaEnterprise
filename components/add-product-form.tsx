@@ -123,7 +123,7 @@ export default function AddProductForm({ onProductAdded }: AddProductFormProps) 
         description: data.description,
         category: data.category,
         inStock: data.inStock,
-        imageUrl,
+        imageUrl: imageUrl || "",
         createdAt: new Date().toISOString(),
       };
     
