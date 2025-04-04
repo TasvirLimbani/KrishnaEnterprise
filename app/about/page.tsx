@@ -102,16 +102,16 @@ export default function AboutPage() {
             role: "Founder & CEO", 
             image: "https://firebasestorage.googleapis.com/v0/b/dtlive-22a03.appspot.com/o/products%2FCEO%2FWhatsApp%20Image%202025-03-08%20at%2011.26.41%20AM.jpeg?alt=media&token=81cd6678-455f-4edb-abcf-6dd9df3f5324" 
           },
-          { 
-            name: "Mr. Pankit A Gajipara", 
-            role: "Founder & CEO", 
-            image: "https://firebasestorage.googleapis.com/v0/b/dtlive-22a03.appspot.com/o/products%2FCEO%2FIMG_1928.PNG?alt=media&token=1c956b0a-300c-4c5e-8bb9-a0b5ade76498" 
-          },
-          { 
-            name: "Mr. Parth A Gajipara", 
-            role: "Founder & CEO", 
-            image: "https://firebasestorage.googleapis.com/v0/b/dtlive-22a03.appspot.com/o/products%2FCEO%2FIMG_1929.PNG?alt=media&token=95c73c83-cc0e-44d1-92a2-235b96709d11" 
-          },
+          // { 
+          //   name: "Mr. Pankit A Gajipara", 
+          //   role: "Founder & CEO", 
+          //   image: "https://firebasestorage.googleapis.com/v0/b/dtlive-22a03.appspot.com/o/products%2FCEO%2FIMG_1928.PNG?alt=media&token=1c956b0a-300c-4c5e-8bb9-a0b5ade76498" 
+          // },
+          // { 
+          //   name: "Mr. Parth A Gajipara", 
+          //   role: "Founder & CEO", 
+          //   image: "https://firebasestorage.googleapis.com/v0/b/dtlive-22a03.appspot.com/o/products%2FCEO%2FIMG_1929.PNG?alt=media&token=95c73c83-cc0e-44d1-92a2-235b96709d11" 
+          // },
         ].map((member, index) => (
           <div key={index} className="text-center">
             <div className="relative h-64 w-64 mx-auto rounded-full overflow-hidden mb-4 bg-gray-200">

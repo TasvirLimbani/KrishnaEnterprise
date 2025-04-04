@@ -34,8 +34,6 @@ export default function ContactPage() {
                 <h3 className="font-medium">Phone</h3>
                 <p className="text-muted-foreground">
                   Main: +91 63522 08845
-                  <br />
-                  Support: +91 70694 85515
                 </p>
               </div>
             </div>
